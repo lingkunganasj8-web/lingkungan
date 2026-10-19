@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLife - Jaga Bumi Kita</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f9f2;
+            color: #263b2b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #164e35;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #a7e66b;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #a7e66b;
+        }
+
+        .hero {
+            min-height: 480px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(
+                90deg,
+                rgba(14, 54, 34, 0.92),
+                rgba(14, 54, 34, 0.25)
+            ), url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #a7e66b;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #78bd43;
+            color: #102b1b;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #a7e66b;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #164e35;
+        }
+
+        .section-title p {
+            color: #647568;
+            margin-top: 8px;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .about h2 {
+            color: #164e35;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            margin-bottom: 15px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #206442;
+            margin-bottom: 10px;
+        }
+
+        .tips {
+            background: #e6f1df;
+        }
+
+        .tips ul {
+            max-width: 700px;
+            margin: auto;
+            list-style: none;
+        }
+
+        .tips li {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+        }
+
+        .tips li::before {
+            content: "✓ ";
+            color: #398344;
+            font-weight: bold;
+        }
+
+        .cta {
+            text-align: center;
+            background: #164e35;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+        }
+
+        footer {
+            background: #103a27;
+            color: #d9e8dc;
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .about,
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🌿 Eco<span>Life</span></div>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#aksi">Aksi Kita</a>
+            <a href="#tips">Tips</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <h1>Jaga Alam,<br><span>Selamatkan Masa Depan</span></h1>
+            <p>
+                Bumi adalah rumah kita bersama. Mari mulai langkah
+                kecil untuk menciptakan lingkungan yang bersih,
+                hijau, dan sehat bagi generasi mendatang.
+            </p>
+            <a href="#aksi" class="btn">Mulai Aksi 🌱</a>
+        </div>
+    </section>
+
+    <section class="about" id="tentang">
+        <div>
+            <h2>Kenapa Lingkungan Itu Penting?</h2>
+            <p>
+                Lingkungan menyediakan udara bersih, air, makanan,
+                dan tempat tinggal bagi semua makhluk hidup.
+                Menjaga lingkungan berarti menjaga kehidupan.
+            </p>
+            <p>
+                Sayangnya, polusi, sampah plastik, penebangan hutan,
+                dan perubahan iklim mengancam keseimbangan alam.
+                Kita semua dapat berkontribusi untuk mengatasinya.
+            </p>
+            <a href="#tips" class="btn">Pelajari Caranya</a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80"
+            alt="Pemandangan alam dan satwa liar"
+        >
+    </section>
+
+    <section id="aksi">
+        <div class="section-title">
+            <h2>Aksi Kecil, Dampak Besar</h2>
+            <p>Mulai perubahan dari kebiasaan sehari-hari.</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="icon">🌳</div>
+                <h3>Menanam Pohon</h3>
+                <p>
+                    Menambah ruang hijau, menyerap karbon,
+                    dan membantu menjaga kualitas udara.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">♻️</div>
+                <h3>Kelola Sampah</h3>
+                <p>
+                    Pilah sampah, daur ulang barang,
+                    dan kurangi penggunaan plastik sekali pakai.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💧</div>
+                <h3>Hemat Air</h3>
+                <p>
+                    Gunakan air secukupnya dan perbaiki
+                    kebocoran untuk menjaga sumber daya air.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tips" id="tips">
+        <div class="section-title">
+            <h2>7 Tips Ramah Lingkungan</h2>
+            <p>Kebiasaan sederhana yang bisa kamu lakukan hari ini.</p>
+        </div>
+
+        <ul>
+            <li>Bawa botol minum dan tas belanja sendiri.</li>
+            <li>Matikan lampu dan alat elektronik saat tidak digunakan.</li>
+            <li>Pisahkan sampah organik dan anorganik.</li>
+            <li>Gunakan transportasi umum, berjalan kaki, atau bersepeda.</li>
+            <li>Tanam dan rawat tumbuhan di rumah.</li>
+            <li>Hindari membuang sampah ke sungai.</li>
+            <li>Ajak keluarga dan teman menjaga kebersihan lingkungan.</li>
+        </ul>
+    </section>
+
+    <section class="cta">
+        <h2>🌍 Bumi Membutuhkan Kita!</h2>
+        <p>
+            Jangan menunggu orang lain untuk memulai.
+            Jadilah bagian dari perubahan hari ini.
+        </p>
+        <button class="btn" onclick="ikutiAksi()">
+            Saya Siap Menjaga Bumi!
+        </button>
+        <p id="pesan" style="margin-top: 20px;"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 EcoLife | Bersama Menjaga Bumi 🌱</p>
+        <p>Mulai dari diri sendiri, mulai dari sekarang.</p>
+    </footer>
+
+    <script>
+        function ikutiAksi() {
+            document.getElementById("pesan").textContent =
+                "Terima kasih! 🌱 Mari wujudkan bumi yang lebih hijau!";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,370 @@
+
+/* =========================
+   STYLE DASAR
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f9f2;
+    color: #263b2b;
+    line-height: 1.6;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+/* =========================
+   HEADER DAN NAVIGASI
+========================= */
+header {
+    background: #164e35;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a7e66b;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a7e66b;
+}
+
+/* =========================
+   HERO / BERANDA
+========================= */
+.hero {
+    min-height: 500px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(14, 54, 34, 0.92),
+            rgba(14, 54, 34, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #a7e66b;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+.btn {
+    display: inline-block;
+    background: #78bd43;
+    color: #102b1b;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a7e66b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   JUDUL SECTION
+========================= */
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #164e35;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #647568;
+}
+
+/* =========================
+   TENTANG LINGKUNGAN
+========================= */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    align-items: center;
+}
+
+.about h2 {
+    color: #164e35;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    margin-bottom: 15px;
+    color: #4d5d50;
+}
+
+.about img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   KARTU AKSI
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    border-bottom: 4px solid #78bd43;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(22, 78, 53, 0.15);
+}
+
+.card .icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #206442;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #647568;
+    font-size: 15px;
+}
+
+/* =========================
+   TIPS LINGKUNGAN
+========================= */
+.tips {
+    background: #e6f1df;
+}
+
+.tips ul {
+    max-width: 700px;
+    margin: auto;
+    list-style: none;
+}
+
+.tips li {
+    background: white;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s;
+}
+
+.tips li:hover {
+    transform: translateX(5px);
+}
+
+.tips li::before {
+    content: "✓ ";
+    color: #398344;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* =========================
+   AJAKAN MENJAGA BUMI
+========================= */
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #164e35, #26734a);
+    color: white;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+#pesan {
+    color: #c7f59d;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #103a27;
+    color: #d9e8dc;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =========================
+   RESPONSIVE TABLET DAN HP
+========================= */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about,
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about img {
+        height: 280px;
+    }
+
+    .section-title h2,
+    .cta h2 {
+        font-size: 27px;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+}
+
+/* =========================
+   RESPONSIVE HP KECIL
+========================= */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 23px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 4px 6px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero {
+        min-height: 380px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 25px 18px;
+    }
+
+    .tips li {
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+}
